@@ -1,0 +1,21 @@
+{
+  "name": "interactive-rating-component-main",
+  "version": "1.0.0",
+  "description": "This is my solution of this challenge of Frontend Mentor",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tailwind -i global.css -o build/tailwind.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ignaciofigueroadev/interactive-rating-component.git"
+  },
+  "author": "Ignacio Figueroa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ignaciofigueroadev/interactive-rating-component/issues"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.3.1"
+  }
+}

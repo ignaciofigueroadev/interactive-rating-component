@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="build/tailwind.css">
+  <script src="js/index.js" defer></script>
+  <title>Frontend Mentor | Interactive rating component</title>
+</head>
+
+<body class="bg-very-dark-blue flex flex-col justify-center items-center min-h-[100vh] text-white font-overpass p-10">
+
+  <!-- Rating state start -->
+
+  <section class="bg-dark-blue w-[23rem] p-7 rounded-xl flex flex-col gap-8" id="rating-state-section">
+
+    <div>
+      <img src="images/icon-star.svg" alt="Star icon" class="bg-gray-700 p-2 rounded-full">
+    </div>
+
+    <div>
+      <h1 class="font-bold text-3xl">How did we do?</h1>
+      <p class="text-light-grey">
+        Please let us know how we did with your support request. All feedback is appreciated
+        to help us improve our offering!
+      </p>
+    </div>
+
+    <div>
+      <ul class="flex justify-between">
+        <li class="item" data-value="1"><button
+            class="rounded-full px-4 py-2 bg-gray-700 font-overpass hover:bg-medium-grey focus:bg-color-orange duration-100">1</button>
+        </li>
+        <li class="item" data-value="2"><button
+            class="rounded-full px-4 py-2 bg-gray-700 font-overpass hover:bg-medium-grey focus:bg-color-orange duration-100">2</button>
+        </li>
+        <li class="item" data-value="3"><button
+            class="rounded-full px-4 py-2 bg-gray-700 font-overpass hover:bg-medium-grey focus:bg-color-orange duration-100">3</button>
+        </li>
+        <li class="item" data-value="4"><button
+            class="rounded-full px-4 py-2 bg-gray-700 font-overpass hover:bg-medium-grey focus:bg-color-orange duration-100">4</button>
+        </li>
+        <li class="item" data-value="5"><button
+            class="rounded-full px-4 py-2 bg-gray-700 font-overpass hover:bg-medium-grey focus:bg-color-orange duration-100">5</button>
+        </li>
+      </ul>
+    </div>
+    <button id="submit-button"
+      class="bg-color-orange p-2 rounded-full uppercase tracking-widest hover:bg-white hover:text-color-orange duration-100">Submit</button>
+
+  </section>
+
+  <!-- Rating state end -->
+  <!-- Thank you state start -->
+
+  <section class="bg-dark-blue w-[23rem] p-7 rounded-xl hidden invisible opacity-0 duration-1000 transition-opacity"
+    id="thank-state-section">
+    <div>
+      <img class="mx-auto mb-10" src="images/illustration-thank-you.svg" alt="Thank you illustration">
+    </div>
+    <div class="text-center flex flex-col gap-7">
+      <p class="text-color-orange bg-gray-700 w-[80%] mx-auto rounded-full">You selected <span id="rated-number"></span>
+        out of 5</p>
+      <h2 class="text-3xl font-bold">Thank you!</h2>
+      <p class="text-light-grey">We appreciate you taking the time to give a rating. If you ever need more support,
+        don't hesitate to get in touch!</p>
+    </div>
+  </section>
+
+  <!-- Thank you state end -->
+
+  <section id="error-state-section"
+    class="bg-dark-blue w-[23rem] p-7 rounded-xl text-center flex flex-col gap-10 fixed l-0 t-0 invisible opacity-0">
+    <div class="flex justify-end">
+      <img src="images/close.svg" alt="Close" class="w-5 invert cursor-pointer" id="close-error-section">
+    </div>
+    <h2 class="text-3xl font-bold">Oops!</h2>
+    <div>
+      <img class="w-60 mx-auto mb-10" src="images/undraw_questions_re_1fy7.svg" alt="Question illustration">
+    </div>
+    <p>It seems that you have not selected an option!</p>
+    <p class="text-xs text-color-orange bg-gray-700 p-2 rounded-full">You must select an option to be able to send the
+      rating</p>
+  </section>
+
+
+  <footer class="text-xs mt-10">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="https://github.com/ignaciofigueroadev" target="_blank" class="text-color-orange">Ignacio
+      Figueroa</a>.
+  </footer>
+</body>
+
+</html>
